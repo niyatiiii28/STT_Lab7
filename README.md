@@ -28,25 +28,29 @@ Objective:
 
 This assignment aims to learn about text classification tasks for checkpoint creation.
 
-1. Dataset Preparation (10%)
+1. Dataset Preparation (10%):
+2. 
 Load the training dataset and test data (Dataset 1). [UPDATED DATASET] 
 Also, the IMDB dataset (Dataset 2) can be used for continual learning. 
 Use 20% of the training dataset as the validation set.
 
-2. Construct a Multi-Layer Perceptron (MLP) model. (20%)
+3. Construct a Multi-Layer Perceptron (MLP) model. (20%):
+
 The parameter should be with:
 hidden_sizes=[512, 256, 128, 64]
 Output should have two labels. 
 With the following architecture:
 <img width="423" alt="Screenshot 2025-03-15 at 10 29 56 PM" src="https://github.com/user-attachments/assets/bce38139-baef-433f-8ebd-9cce952f1951" />
+
 Count the number of trainable parameters in the model using the automated function.
 
-3. Implement case 1: Bag-of-words (20%)
+5. Implement case 1: Bag-of-words (20%):
+
 Implement the bag-of-words (max_features=10000). 
 Hint: from sklearn.feature_extraction.text import CountVectorizer
 
 
-4. Implement case 2: Construct a function to use embeddings on the same model. (20%)
+7. Implement case 2: Construct a function to use embeddings on the same model. (20%)
 Use the model: meta-llama/Llama-3.1-8B or use bert-base-uncased if facing issues with the GPU constraints. 
 TIPS: 
 You can use the distilled version, gather embeddings for 200 samples, and even reduce the precision to deal with computing issues!
