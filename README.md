@@ -44,13 +44,13 @@ With the following architecture:
 
 Count the number of trainable parameters in the model using the automated function.
 
-5. Implement case 1: Bag-of-words (20%):
+4. Implement case 1: Bag-of-words (20%):
 
 Implement the bag-of-words (max_features=10000). 
 Hint: from sklearn.feature_extraction.text import CountVectorizer
 
 
-7. Implement case 2: Construct a function to use embeddings on the same model. (20%)
+5. Implement case 2: Construct a function to use embeddings on the same model. (20%)
 Use the model: meta-llama/Llama-3.1-8B or use bert-base-uncased if facing issues with the GPU constraints. 
 TIPS: 
 You can use the distilled version, gather embeddings for 200 samples, and even reduce the precision to deal with computing issues!
@@ -63,19 +63,19 @@ self.tokenizer = AutoTokenizer.from_pretrained(model_name)
 USE BOTH CASES IN PARALLEL TO EACH OTHER (ONE WITH BOW AND ANOTHER WITH EMBEDDINGS). NOT ON TOP OF EACH OTHER.
 
 
-5. Train the model with 10 epochs and create the best-performing model (checkpoint.pt) on the Dataset 1. (10%)
+6. Train the model with 10 epochs and create the best-performing model (checkpoint.pt) on the Dataset 1. (10%)
 Get the validation accuracy.
 
 
-6. Use the checkpoint from before and train on the IMDB dataset (Dataset 2). (10%)
+7. Use the checkpoint from before and train on the IMDB dataset (Dataset 2). (10%)
 Use the following parameters:
 criterion = nn.CrossEntropyLoss()
 optimizer = optim.Adam(model.parameters(), lr=0.0001)  # Smaller learning rate
 
 
-7. Compute the validation loss and accuracy on the validation set of the Dataset 1 and IMDB dataset. (10%)
+8. Compute the validation loss and accuracy on the validation set of the Dataset 1 and IMDB dataset. (10%)
 
-8. Submission Requirements
+9. Submission Requirements
 Python code for training, testing, and evaluation.
 Screenshots of the following displaying:
 Model architecture.
